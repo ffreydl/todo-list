@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:ital,wght@0,700;1,700&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1A1A1A;
+    color: white;
+}
+
+body.light-mode {
+    background-color: #f4f4f4;
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    padding: 0 16px;
+    max-width: 550px;
+    margin: 40px auto;
+}
+
+#add-btn {
+    width: 100%;
+    background-color: #0066FF;
+    margin-top: 16px;
+    height: 36px;
+    padding: 0 18px;
+    font-size: 14px;
+    border-radius: 8px;
+    color: white;
+    border: none;
+}
+
+.tasks, h1, h2 {
+    margin-top: 16px;
+}
+
+h1 {
+    font-weight: 700;
+    color: #BFBEBE;
+}
+
+body.light-mode h1 {
+    color: black;
+}
+
+h2 {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-content {
+    background: #1A1B1E;
+    padding: 20px;
+    border-radius: 5px;
+    width: 350px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+body.light-mode .modal-content {
+    background-color: white;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: #2C2E33;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    color: white;
+}
+
+body.light-mode input, body.light-mode textarea {
+    color: black;
+    background-color: white;
+    border: 1px solid #CED4DA;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.create-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-items: start;
+    background-color: #2A2A2A;
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+body.light-mode .task {
+    background-color: white;
+    color: black;
+}
+
+.task input {
+    width: auto;
+    margin-right: 16px;
+    margin-bottom: 0px;
+}
+
+.task h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.task p {
+    margin-top: 5px;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    color: darkred;
+}
+
+.task-details {
+    height: 100%;
+}
+
+.task-details.completed h3 {
+    text-decoration: line-through;
+    color: #777;
+}
+
+#task-summary {
+    resize: none;
+}
+
+#task-modal {
+    display: none;
+}
+
+.fas.fa-moon {
+    display: none;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: #0066FF;
+    cursor: pointer;
+    font-size: 16px;
+}
